@@ -1,0 +1,4 @@
+const result = ({res}) =>
+{
+    return 
+}
