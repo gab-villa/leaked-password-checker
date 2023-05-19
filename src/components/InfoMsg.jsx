@@ -18,7 +18,7 @@ export const InfoMsg = () =>
     );
     return (
         <OverlayTrigger trigger="click" placement="left" overlay={popover}>
-            <Button className="py-0" variant="link">How it works?</Button>
+            <Button className="py-0 px-0" variant="link">How it works?</Button>
         </OverlayTrigger>
     );
 }
