@@ -10,16 +10,16 @@ import  Alert from 'react-bootstrap/Alert';
 import Collapse from 'react-bootstrap/Collapse';
 import { useState, useEffect } from 'react';
 import SHA1 from 'sha1-es';
+import { InfoMsg } from './components/InfoMsg.jsx';
+import { Navbar } from 'react-bootstrap';
+
+
 
 function App() {
-  /*
-  const hash = SHA1.hash('abc');
-  console.log(hash);*/
   const [psw, setPsw] = useState('');
   //possible: firstTyping, typing, submmiting, success
   const [status, setStatus] = useState('firstTyping');
   const PATH_TO_PWNDB = "https://api.pwnedpasswords.com/range/";
-  //const [passList, setPassList] = useState();
   const [res, setRes] = useState({wasLeaked:false,headMsg:"",bodyMsg:""});
  
  
@@ -61,10 +61,7 @@ function App() {
         headMsg="Your password has been seen " + match[1] + " times before";
         bodyMsg="This password has previously appeared in a data breach "+
                 "and should never be used. If you've ever used it anywhere before, change it!";
-        //la contraseña esta en la bd
-        //aparece en match[1] porque es el primer grupo de captura
-        //que seria (\\d) osea uno o mas digitos (0-9)
-        //console.log("la clave esta en la bd y aparece " + match[1] + " veces");
+        
       }
       else
       {           
@@ -85,18 +82,20 @@ function App() {
   }
   return (
     <>
-      <Container className = "vh-100 px-0" fluid>
+      <Container className = "vh-100" fluid>
         <Row className = "justify-content-center align-items-center h-100">
           <Col xs={12} sm={10} md={8}>
             <Card bg="light" className="mb-2">
               <Card.Header>
                 <Row>
+                  <Navbar className="px-2 py-0">
                   <Col>
                     Password tester
                   </Col>
                   <Col className="justify-content-end text-end">
-                    How it works?
+                    <InfoMsg />
                   </Col>
+                  </Navbar>
                 </Row>
               </Card.Header>
             <Card.Body>
