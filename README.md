@@ -1,5 +1,5 @@
 # leaked-password-checker
-Deployed on vercel: https://leaked-password-checker.vercel.app/
+Deployed on vercel: https://leaked-password-checker.vercel.app/ <br>
 This couldn't be possible without the help of HaveIBeenPwned, which
 allow us to query hundreds of millions of real world passwords 
 previously exposed in data breaches. This exposure makes them 
