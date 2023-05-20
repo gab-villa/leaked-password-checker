@@ -5,14 +5,13 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Card from 'react-bootstrap/Card';
-import Accordion from 'react-bootstrap/Accordion';
 import  Alert from 'react-bootstrap/Alert';
 import Collapse from 'react-bootstrap/Collapse';
-import { useState, useEffect } from 'react';
-import SHA1 from 'sha1-es';
-import { InfoMsg } from './components/InfoMsg.jsx';
-import { Navbar } from 'react-bootstrap';
+import Navbar from 'react-bootstrap/Navbar';
+import { useState } from 'react';
 
+import { InfoMsg } from './components/InfoMsg.jsx';
+import SHA1 from 'sha1-es';
 
 
 function App() {
@@ -90,7 +89,7 @@ function App() {
                 <Row>
                   <Navbar className="px-2 py-0">
                   <Col>
-                    Password tester
+                    Leaked Password Checker
                   </Col>
                   <Col className="justify-content-end text-end">
                     <InfoMsg />
