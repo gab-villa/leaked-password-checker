@@ -20,24 +20,7 @@ function App() {
   const [status, setStatus] = useState('firstTyping');
   const PATH_TO_PWNDB = "https://api.pwnedpasswords.com/range/";
   const [res, setRes] = useState({wasLeaked:false,headMsg:"",bodyMsg:""});
- 
- 
-  async function fetchHashList(pswHashSearch, delay)
-  {
-      setTimeout(async function(){
-        try
-        {
-          console.log("dasdas");
-          
-        }
-        catch(error)
-        {
-          console.log(error);
-        }
-        
-      }, delay);
-      
-  }
+  
   function handleSubmit(e)
   {
     
@@ -81,10 +64,10 @@ function App() {
   }
   return (
     <>
-      <Container className = "vh-100" fluid>
+      <Container className = "bg-dark bg-opacity-75 vh-100" fluid>
         <Row className = "justify-content-center align-items-center h-100">
           <Col xs={12} sm={10} md={8}>
-            <Card bg="light" className="mb-2">
+            <Card border="info" bg="secondary" text="info" className="mb-5">
               <Card.Header>
                 <Row>
                   <Navbar className="px-2 py-0">
@@ -118,7 +101,7 @@ function App() {
                       disabled={psw.length === 0 ||
                                 status === "submitting"}
                       
-                      variant="outline-success" 
+                      variant="outline-info" 
                       aria-controls="collapse-result"
                       aria-expanded={status === 'typing'}
                       >
